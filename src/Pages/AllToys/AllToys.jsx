@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import AllToysRow from './AllToysRow';
+import { FaSistrix } from 'react-icons/fa';
 
 const AllToys = () => {
 
@@ -17,7 +18,12 @@ const AllToys = () => {
         <div>
             <div>
                 <div className="overflow-x-auto w-full">
-                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <div>
+                        <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs mb-3 ml-60 gap-5" />
+                        <button><FaSistrix></FaSistrix></button>
+                    </div>
+
+
                     <table className="table w-full">
                         {/* head */}
                         <thead>

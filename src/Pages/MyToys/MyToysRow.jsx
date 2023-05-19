@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import UpdatedToys from './UpdatedToys';
 
 
 
@@ -33,12 +35,14 @@ const MyToysRow = ({ mytoy, handleDelete, handleUpdate }) => {
             <td>{quantity}</td>
             <td>${ToyPrice}</td>
             <th>
-                {status === 'updated' ?<span  className='font-bold text-primary'>Updated</span>:
-                    <button onClick={() => handleUpdate(_id)} className="btn btn-ghost btn-xs">UPDATE </button>
-                }
-               
+                <Link to={`/toys/${_id}`}><button >Update</button></Link>
             </th>
+            <UpdatedToys
+              
+                handleUpdate={handleUpdate}
+            ></UpdatedToys>
         </tr>
+
     );
 };
 
