@@ -38,25 +38,77 @@ const Category = () => {
 
                     <TabPanel>
                         {/* Content for Tab 1 */}
-                        <p>Tab 1 Content</p>
+                        <div>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src="https://i.ibb.co/vxpt7rm/6161b2076e98da44be8f963b61efa5d6.jpg" alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-center">ToyName: Soft Teddy</h2>
+                                    <h2>ToyPrice: $550</h2>
+                                    <p>bio:I'd be happy to provide feedback on your toys website.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src="https://i.ibb.co/kD5t0Cr/pexels-photo-168866.jpg"alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-center">ToyName: teddy</h2>
+                                    <h2>ToyPrice: $80</h2>
+                                    <p>bio:None</p>
+                                </div>
+                            </div>
+                        </div>
                     </TabPanel>
                     <TabPanel>
                         {/* Content for Tab 2 */}
-                        <p>Tab 2 Content</p>
+                        <div>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src="https://i.ibb.co/xL0xj2d/images-14.jpg"alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-center">ToyName: Silver Angry bird</h2>
+                                    <h2>ToyPrice: $850</h2>
+                                    <p>bio:I'd be happy to provide feedback on your toys website.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src="https://i.ibb.co/0tTFfYN/026291fb-2f15-4e23-a11c-46347ec613ee.jpg"alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-center">ToyName: Angery Birds toys</h2>
+                                    <h2>ToyPrice: $40</h2>
+                                    <p>bio:None</p>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </TabPanel>
                     <TabPanel>
                         {/* Content for Tab 3 */}
-                        <p>Tab 3 Content</p>
+                        <div>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src="https://i.ibb.co/TqW7h8Y/images-13.jpg" alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-center">ToyName: unicorn</h2>
+                                    <h2>ToyPrice: $50</h2>
+                                    <p>bio:I'd be happy to provide feedback on your toys website.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="card w-96 bg-base-100 shadow-xl">
+                                <figure><img src="https://i.ibb.co/L6wh7VS/download-8.jpg"alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-center">ToyName: Unicorn Plush Toy</h2>
+                                    <h2>ToyPrice: $30</h2>
+                                    <p>bio:None</p>
+                                </div>
+                            </div>
+                        </div>
                     </TabPanel>
                 </Tabs>
             </div>
-            {toys?.map((toy) => (
-                <ToyShop key={toy._id}
-                    toy={toy}
-                >
-                </ToyShop>
-
-            ))}
+          
         </div>
 
     );
