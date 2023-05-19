@@ -6,6 +6,7 @@ import NavBar from '../Pages/NavBar/NavBar';
 import Gallery from '../Pages/Gallery';
 import Category from '../Pages/Category/Category';
 import ChildsZone from '../Pages/ChildsZone';
+import ToysClean from '../Pages/ToysClean';
 
 const Main = () => {
     return (
@@ -15,6 +16,7 @@ const Main = () => {
             <Gallery></Gallery>
             <Category></Category>
             <ChildsZone></ChildsZone>
+            <ToysClean></ToysClean>
             
             <Footer></Footer>
         </div>
