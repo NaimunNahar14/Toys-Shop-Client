@@ -17,6 +17,7 @@ const AllToys = () => {
         <div>
             <div>
                 <div className="overflow-x-auto w-full">
+                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                     <table className="table w-full">
                         {/* head */}
                         <thead>
