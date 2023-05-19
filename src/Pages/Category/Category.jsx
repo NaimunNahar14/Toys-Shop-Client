@@ -7,24 +7,24 @@ const Category = () => {
     const [toys, setToy] = useState([]);
     const [activeTab, setActiveTab] = useState("Teddy");
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch("http://localhost:5000/alltoys")
-        .then(res=>res.json())
-        .then(data =>{
-            setToy(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                setToy(data);
+            })
 
-    },[])
+    }, [])
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
-      };
+    };
     return (
         <div>
             <h2 className='text-3xl text-center'>SHOP BY CATEGORY</h2>
             <div className="flex justify-center mt-3">
                 <Tabs>
                     <TabList className="flex space-x-4">
-                        <Tab className="text-lg font-medium text-gray-600 hover:text-gray-800 cursor-pointer" onClick={()=>handleTabClick('Teddy')}>
+                        <Tab className="text-lg font-medium text-gray-600 hover:text-gray-800 cursor-pointer" onClick={() => handleTabClick('Teddy')}>
                             Teddy  Bear toys
                         </Tab>
                         <Tab className="text-lg font-medium text-gray-600 hover:text-gray-800 cursor-pointer">
@@ -49,16 +49,16 @@ const Category = () => {
                         <p>Tab 3 Content</p>
                     </TabPanel>
                 </Tabs>
-            </div>    
-                {toys?.map((toy) => (
-                    <ToyShop key={toy._id}
-                    toy={toy}
-                    >
-                    </ToyShop>
-                    
-                ))}
             </div>
-       
+            {toys?.map((toy) => (
+                <ToyShop key={toy._id}
+                    toy={toy}
+                >
+                </ToyShop>
+
+            ))}
+        </div>
+
     );
 };
 

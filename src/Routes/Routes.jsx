@@ -6,11 +6,11 @@ import Blogs from "../Pages/Blogs";
 import ErrorPage from "../Pages/ErrorPage";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
-import Category from "../Pages/Category/Category";
 import Addtoys from "../Pages/AddToys/Addtoys";
 import AllToys from "../Pages/AllToys/AllToys";
 import MyToys from "../Pages/MyToys/MyToys";
 import PrivateRoutes from "./PrivateRoutes";
+
 
 const router = createBrowserRouter([
     {
@@ -52,7 +52,8 @@ const router = createBrowserRouter([
             {
                 path: '/mytoys',
                 element:<PrivateRoutes> <MyToys></MyToys></PrivateRoutes>
-            }
+            },
+           
         ]
     }
   ]);

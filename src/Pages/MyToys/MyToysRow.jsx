@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+
 
 const MyToysRow = ({ mytoy, handleDelete, handleUpdate }) => {
     //   console.log(mytoy);
     const { _id, ToyName, ToyPhoto, ToyPrice, sellername, email, quantity, status } = mytoy;
-    console.log(mytoy)
+    // console.log(mytoy)
 
     return (
         <tr>
@@ -31,9 +33,10 @@ const MyToysRow = ({ mytoy, handleDelete, handleUpdate }) => {
             <td>{quantity}</td>
             <td>${ToyPrice}</td>
             <th>
-                {status === 'updated' ? <span className='font-bold text-primary'>Updated</span> :
+                {status === 'updated' ?<span  className='font-bold text-primary'>Updated</span>:
                     <button onClick={() => handleUpdate(_id)} className="btn btn-ghost btn-xs">UPDATE </button>
                 }
+               
             </th>
         </tr>
     );
