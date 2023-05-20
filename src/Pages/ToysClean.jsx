@@ -11,14 +11,7 @@ const ToysClean = () => {
                     <div>
 
                         <p className="py-6">
-                        Clean animals-based toys are toys that represent domesticated or commonly kept animals. They can be made of different materials and come in various forms such as plush animals, figurines, or interactive toys. These toys provide comfort, companionship, and can be used for imaginative play and educational purposes. They help children learn about animals, develop nurturing skills, and engage in role-playing activities.
-
-
-
-
-
-
-                        </p>
+                            Clean animals-based toys are toys that represent domesticated or commonly kept animals. They can be made of different materials and come in various forms such as plush animals, figurines, or interactive toys. These toys provide comfort, companionship, and can be used for imaginative play and educational purposes. They help children learn about animals, develop nurturing skills, and engage in role-playing activities.</p>
                         <h2>Thank you</h2>
                     </div>
                 </div>

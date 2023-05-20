@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 const ToysUpdate = () => {
     const update = useLoaderData();
     const { _id, ToyPrice, quantity, bio } = update;
-    // console.log(update)
+ 
 
     const handleUpdated = event => {
         event.preventDefault();
