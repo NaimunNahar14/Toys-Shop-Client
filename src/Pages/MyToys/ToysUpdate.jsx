@@ -40,9 +40,6 @@ const ToysUpdate = () => {
 
     }
 
-
-
-
     return (
         <div>
             <form onSubmit={handleUpdated}>
