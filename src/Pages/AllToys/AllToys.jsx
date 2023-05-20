@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../Providers/AuthProviders';
 import AllToysRow from './AllToysRow';
 import { FaSistrix } from 'react-icons/fa';
 
 const AllToys = () => {
 
-    const { user } = useContext(AuthContext);
     const [alltoys, setAlltoys] = useState([]);
     const url = `http://localhost:5000/alltoys`;
     useEffect(() => {
