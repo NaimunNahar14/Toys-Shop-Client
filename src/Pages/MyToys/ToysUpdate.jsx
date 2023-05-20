@@ -47,7 +47,7 @@ const ToysUpdate = () => {
                     <label className="label">
                         <span className="label-text">Price</span>
                     </label>
-                    <input type="text" name='price' defaultValue={ToyPrice} className="input input-bordered" />
+                    <input type="text" name='price'  defaultValue={ToyPrice} className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">

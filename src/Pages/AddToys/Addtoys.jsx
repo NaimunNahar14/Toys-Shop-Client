@@ -13,6 +13,7 @@ const Addtoys = () => {
         const email = form.email.value;
         const select = form.select.value;
         const price = form.price.value;
+        const rating = form.rating.value;
         const quantity = form.quantity.value;
         const bio = form.bio.value;
         const addToy = {
@@ -22,13 +23,14 @@ const Addtoys = () => {
             email,
             select,
             ToyPrice: price,
+            Rating: rating,
             quantity,
             bio,
         }
         console.log(addToy);
 
         fetch('https://toys-shop-server.vercel.app/toys', {
-            method:"POST",
+            method: "POST",
             headers: {
                 'content-type': 'application/json'
 
@@ -38,7 +40,7 @@ const Addtoys = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if (data.insertedId) {
                     alert('Toy added successfully')
                 }
             })
@@ -87,6 +89,12 @@ const Addtoys = () => {
                         <span className="label-text">Price</span>
                     </label>
                     <input type="text" name='price' className="input input-bordered" />
+                </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Rating</span>
+                    </label>
+                    <input type="text" name='rating'  className="input input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">

@@ -19,7 +19,7 @@ const Category = () => {
         setActiveTab(tabName);
     };
     return (
-        <div>
+        <div data-aos="fade-down" data-aos-duration="1000">
             <h2 className='text-3xl text-center'>SHOP BY CATEGORY</h2>
             <div className="flex justify-center mt-3">
                 <Tabs>
@@ -45,6 +45,7 @@ const Category = () => {
                                     <h2 className="card-title text-center">ToyName: Soft Teddy</h2>
                                     <h2>ToyPrice: $550</h2>
                                     <p>bio:I'd be happy to provide feedback on your toys website.</p>
+                                    <button className="btn btn-outline btn-error">View Details</button>
                                 </div>
                             </div>
                         </div>
@@ -55,6 +56,7 @@ const Category = () => {
                                     <h2 className="card-title text-center">ToyName: teddy</h2>
                                     <h2>ToyPrice: $80</h2>
                                     <p>bio:None</p>
+                                    <button className="btn btn-outline btn-error">View Details</button>
                                 </div>
                             </div>
                         </div>
@@ -68,6 +70,7 @@ const Category = () => {
                                     <h2 className="card-title text-center">ToyName: Silver Angry bird</h2>
                                     <h2>ToyPrice: $850</h2>
                                     <p>bio:I'd be happy to provide feedback on your toys website.</p>
+                                    <button className="btn btn-outline btn-error">View Details</button>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +81,7 @@ const Category = () => {
                                     <h2 className="card-title text-center">ToyName: Angery Birds toys</h2>
                                     <h2>ToyPrice: $40</h2>
                                     <p>bio:None</p>
+                                    <button className="btn btn-outline btn-error">View Details</button>
                                 </div>
                             </div>
                         </div>
@@ -92,6 +96,7 @@ const Category = () => {
                                     <h2 className="card-title text-center">ToyName: unicorn</h2>
                                     <h2>ToyPrice: $50</h2>
                                     <p>bio:I'd be happy to provide feedback on your toys website.</p>
+                                    <button className="btn btn-outline btn-error">View Details</button>
                                 </div>
                             </div>
                         </div>
@@ -102,6 +107,7 @@ const Category = () => {
                                     <h2 className="card-title text-center">ToyName: Unicorn Plush Toy</h2>
                                     <h2>ToyPrice: $30</h2>
                                     <p>bio:None</p>
+                                    <button className="btn btn-outline btn-error">View Details</button>
                                 </div>
                             </div>
                         </div>

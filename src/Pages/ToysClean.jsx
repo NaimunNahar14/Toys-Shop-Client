@@ -3,7 +3,7 @@ import img1 from '../assets/disinfect-stuffed-animal-1-fcfc1cceeb5649728a9e876ba
 
 const ToysClean = () => {
     return (
-        <div >
+        <div data-aos="flip-right" data-aos-duration="1000">
             <h2 className='text-center text-3xl text-cyan-950'>Why clean Animals toys</h2>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">

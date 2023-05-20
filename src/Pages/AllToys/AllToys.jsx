@@ -12,12 +12,14 @@ const AllToys = () => {
             .then(data => setAlltoys(data))
 
     }, [url])
+
+
     return (
         <div>
             <div>
                 <div className="overflow-x-auto w-full">
                     <div>
-                        <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs mb-3 ml-60 gap-5" />
+                        <input type="text" placeholder="Type here" id='myinput' className="input input-bordered w-full max-w-xs mb-3 ml-60 gap-5" />
                         <button><FaSistrix></FaSistrix></button>
                     </div>
 
