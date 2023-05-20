@@ -1,14 +1,14 @@
 
 import React, { useEffect, useState } from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import ToyShop from '../ToyShop';
+
 
 const Category = () => {
     const [toys, setToy] = useState([]);
     const [activeTab, setActiveTab] = useState("Teddy");
 
     useEffect(() => {
-        fetch("http://localhost:5000/alltoys")
+        fetch("https://toys-shop-server.vercel.app/alltoys")
             .then(res => res.json())
             .then(data => {
                 setToy(data);

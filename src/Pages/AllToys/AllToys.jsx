@@ -5,7 +5,7 @@ import { FaSistrix } from 'react-icons/fa';
 const AllToys = () => {
 
     const [alltoys, setAlltoys] = useState([]);
-    const url = `http://localhost:5000/alltoys`;
+    const url = `https://toys-shop-server.vercel.app/alltoys`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
