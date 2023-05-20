@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate} from 'react-router-dom';
 import img from '../assets/istockphoto-687165852-612x612.jpg';
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from 'react';
@@ -18,7 +18,7 @@ const Login = () => {
          const user = result.user;
          toast.success('Successfully login!')
          console.log(user);
-        //  navigate(from, {replace: true});
+         navigate(from, {replace: true});
         })
         .catch(error =>{
          console.log(error.message);
@@ -27,11 +27,15 @@ const Login = () => {
      }
 
     const {SignIn} = useContext(AuthContext);
+    const navigate =useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
     const Handlelogin = event =>{
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password= form.password.value;
+
 
         SignIn(email,password)
         .then(result =>{
@@ -39,6 +43,7 @@ const Login = () => {
             alert('login SuccessFully')
             
             console.log(user)
+            navigate(from, {replace: true});
         })
         .catch(error => console.log(error))
     }
