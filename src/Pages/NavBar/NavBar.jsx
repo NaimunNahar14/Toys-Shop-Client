@@ -17,7 +17,7 @@ const NavBar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/review'>Review</Link></li>
         <li><Link to='/alltoys'>ALL TOY S</Link></li>
-        {/* {user && <li><Link to='/mytoys'>MY TOY S</Link></li>} */}
+        {user && <li><Link to='/mytoys'>MY TOY S</Link></li>}
         <li><Link to='/addtoy'>ADD TOY</Link></li>
         <li><Link to='/blogs'>BLOG</Link></li>
         {
