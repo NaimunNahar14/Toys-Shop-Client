@@ -5,7 +5,7 @@ import MyToysRow from './MyToysRow';
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [mytoys, setMytoys] = useState([]);
-    const url = `http://localhost:5000/toys?email=${user?.email}`;
+    const url = `http://localhost:5000/mytoys?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -14,7 +14,7 @@ const MyToys = () => {
     const handleDelete = id => {
         const proceed = confirm('Are You sure want To Delete Toy');
         if (proceed) {
-            fetch(`http://localhost:5000/toys/${id}`, {
+            fetch(`http://localhost:5000/mytoys/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -29,32 +29,7 @@ const MyToys = () => {
 
         }
     }
-    const handleUpdate = id => {
-        const proceed = confirm('Are You sure want To Updated Toy');
-        if (proceed) {
-            fetch(`http://localhost:5000/toys/${id}`, {
-                method: 'PATCH',
-                headers: {
-                    'content-type': 'application/json'
-
-                },
-                body: JSON.stringify({status: 'updated'})
-            })
-                .then(res => res.json())
-                .then(data => {
-                    // console.log(data)
-                    if (data.modifiedCount > 0) {
-                    const remaining = mytoys.filter(mytoy => mytoy._id !== id);
-                    const updated = mytoys.find(mytoy => mytoy._id === id);
-                    updated.status= 'updated'
-                    const newToy = [updated, ...remaining];
-                    setMytoys(newToy);
-
-                    }
-                })
-        }
-
-    }
+    
     return (
         <div>
             <div className="overflow-x-auto w-full">
@@ -79,7 +54,6 @@ const MyToys = () => {
                                 key={mytoy._id}
                                 mytoy={mytoy}
                                 handleDelete={handleDelete}
-                                handleUpdate={handleUpdate}
 
                             ></MyToysRow>)
                         }

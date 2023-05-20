@@ -1,11 +1,8 @@
+import { Link } from "react-router-dom";
 
-
-
-
-
-const MyToysRow = ({ mytoy, handleDelete, handleUpdate }) => {
+const MyToysRow = ({ mytoy, handleDelete }) => {
     //   console.log(mytoy);
-    const { _id, ToyName, ToyPhoto, ToyPrice, sellername, email, quantity, status } = mytoy;
+    const { _id, ToyName, ToyPhoto, ToyPrice, sellername, email, quantity } = mytoy;
     // console.log(mytoy)
 
     return (
@@ -34,12 +31,15 @@ const MyToysRow = ({ mytoy, handleDelete, handleUpdate }) => {
             <td>{quantity}</td>
             <td>${ToyPrice}</td>
             <th>
+                <Link to={`/mytoys/${_id}`}><button className="btn btn-ghost btn-xs">Update</button></Link>
+            </th>
+            {/* <th>
                 {status === 'updated' ?<button >updated</button>:
                     <button onClick={() => handleUpdate(_id)} className="btn btn-ghost btn-xs">UPDATE </button>
                     
                 }
                
-            </th>
+            </th> */}
         </tr>
     );
 };
