@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import AllToysRow from './AllToysRow';
 import { FaSistrix } from 'react-icons/fa';
 
